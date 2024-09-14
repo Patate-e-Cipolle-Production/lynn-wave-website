@@ -8,7 +8,7 @@ const Object = () => {
     const object3d = useGLTF('/esp32.glb');
 
     return (
-        <primitive object={object3d.scene} scale={2} position-y={-0.2} rotation-y={0} />
+        <primitive object={object3d.scene} scale={2} position-y={0.2} rotation-x={0.5} rotation-z={0.3} />
     );
 };
 
@@ -24,12 +24,16 @@ const Canvas3D = () => {
                 fov: 45,
                 near: 0.1,
                 far: 200,
-                position: [-3, 3, 6],
+                position: [-5, 3, 6],
             }}
         >
             <OrbitControls
                 autoRotate
+                autoRotateSpeed={1.0}
+                enablePan={false}
                 enableZoom={false}
+                maxPolarAngle={Math.PI / 2}
+                minPolarAngle={Math.PI / 2}
             />
             <Object />
             <hemisphereLight intensity={1.30} groundColor='black' />
