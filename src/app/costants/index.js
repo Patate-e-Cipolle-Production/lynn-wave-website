@@ -2,15 +2,15 @@
 const navlinks = [
     {
         text: 'Chi siamo',
-        link: '/about'
+        link: '/#about'
     },
     {
         text: 'Cosa Offriamo',
-        link: '/about'
+        link: '/#products'
     },
     {
         text: 'Contatti',
-        link: '/contacts'
+        link: '/#contacts'
     },
 ]
 
