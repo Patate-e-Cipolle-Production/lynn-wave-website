@@ -15,7 +15,7 @@ const Object = () => {
 const Canvas3D = () => {
     return (
         <Canvas
-            className='z-40'
+            className='z-50'
             shadows
             frameloop='demand'
             dpr={[1, 2]}
