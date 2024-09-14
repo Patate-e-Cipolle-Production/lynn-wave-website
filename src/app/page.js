@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, Navbar, Canvas3D } from "./components";
 import { esp32 } from "./assets";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="flex flex-col w-full min-h-screen bg-app-gradient justify center">
       <Navbar />
@@ -11,7 +11,6 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center w-full h-full">
           <Card />
           <div className="flex items-center justify-center w-1/2 h-full">
-            {/* <Image src={esp32} className="2xl:w-[550px] md:w-[450px]" /> */}
             <Canvas3D className="2xl:w-[550px] md:w-[450px]" />
           </div>
         </div>
@@ -33,3 +32,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+export default Home

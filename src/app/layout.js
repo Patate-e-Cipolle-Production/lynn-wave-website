@@ -1,5 +1,5 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import { Footer, Navbar } from "./components";
 
 
 export const metadata = {
@@ -9,11 +9,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
+    <html lang="it">
+      <body>
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

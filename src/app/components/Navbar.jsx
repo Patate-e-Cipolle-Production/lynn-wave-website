@@ -42,7 +42,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='fixed w-full bg-secondary h-[60px] flex flex-row justify-between px-10 ibm-plex-mono-light z-50'>
+        <div className='fixed w-full bg-secondary h-[60px] flex flex-row justify-between px-10 ibm-plex-mono-medium z-50'>
             <div>
                 Logo
             </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         onClick={() => setActiveLink(index)}
                         key={index}
                     >
-                        <Link href={navlink.link}>
+                        <Link href={navlink.link} className='unselectable' draggable={false}>
                             {navlink.text}
                         </Link>
                     </div>
