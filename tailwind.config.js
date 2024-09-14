@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'default-card': '0px 2px 20px 2px rgba(0, 0, 0, 0.1)', // x, y, blur, spread, color
+        'navlink': '2px 0px 20px 2px rgba(0, 0, 0, 0.1)', // x, y, blur, spread, color
         'object-card': '0px 2px 20px 2px rgba(0, 0, 0, 0.2)', // x, y, blur, spread, color
       },
       backgroundImage: {

@@ -10,10 +10,10 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center w-full h-full">
           <Card/>
           <div className="flex items-center justify-center w-1/2 h-full">
-            <Image src={esp32} className="w-[550px]"/>
+            <Image src={esp32} className="2xl:w-[550px] md:w-[450px]"/>
           </div>
         </div>
-        <div className="text-3xl flex items-center justify-center bg-white text-tertiary rounded-2xl w-[520px] h-[100px] hover:bg-secondary shadow-default-card">
+        <div className="2xl:text-3xl md:text-2xl flex items-center justify-center bg-white text-tertiary rounded-2xl 2xl:w-[520px] 2xl:h-[100px] md:w-[380px] md:h-[70px] hover:bg-secondary shadow-default-card">
           Iscriviti alla newsletter
         </div>
       </div>
