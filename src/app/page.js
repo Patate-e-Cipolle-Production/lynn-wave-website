@@ -10,7 +10,7 @@ const Home = () => {
         <div className="flex flex-col-reverse items-center justify-center w-full h-full pb-12 lg:flex-row ">
           <Card />
           <div className="flex items-center justify-center w-full h-full md:w-1/2">
-            <Canvas3D className="2xl:w-[550px] md:w-[450px]" />
+            <Canvas3D className="2xl:w-[550px] md:w-[450px] w-full" />
           </div>
         </div>
         <div className="2xl:text-3xl text-2xl flex items-center justify-center bg-white text-tertiary md:rounded-2xl rounded-xl 2xl:w-[520px] 2xl:h-[100px] md:w-[380px] md:h-[70px] w-full h-[100px] hover:bg-secondary shadow-default-card">
