@@ -7,54 +7,41 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll('section');
-            const options = {
-                root: null, 
-                threshold: 0.7 // Cambia navlink quando il 70% della sezione è visibile
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = Array.from(sections).indexOf(entry.target);
-                        setActiveLink(index); // Imposta il navlink attivo in base alla sezione visibile
-                    }
-                });
-            }, options);
-
-            sections.forEach((section) => {
-                observer.observe(section);
-            });
-
-            return () => {
-                sections.forEach((section) => {
-                    observer.unobserve(section);
-                });
-            };
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null, 
+            threshold: 0.3 // Cambia navlink quando almeno il 30% della sezione è visibile
         };
 
-        handleScroll();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(sections).indexOf(entry.target);
+                    setActiveLink(index); // Imposta il navlink attivo in base alla sezione visibile
+                }
+            });
+        }, options);
+
+        sections.forEach((section) => observer.observe(section));
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            sections.forEach((section) => observer.unobserve(section));
         };
     }, []);
 
     return (
-        <div className='fixed w-full bg-secondary h-[60px] md:flex flex-row justify-between px-10 ibm-plex-mono-medium z-50 hidden '>
+        <div className='fixed w-full bg-secondary h-[60px] flex flex-row justify-between px-10 ibm-plex-mono-medium z-50'>
             <div>
                 Logo
             </div>
 
-            <div className='flex flex-row items-center justify-center'>
+            <div className='flex flex-row justify-center items-center'>
                 {navlinks.map((navlink, index) => (
                     <div 
                         className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
-                        onClick={() => setActiveLink(index)}
                         key={index}
                     >
-                        <Link href={navlink.link} className='unselectable' draggable={false}>
+                        <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
                             {navlink.text}
                         </Link>
                     </div>
