@@ -8,7 +8,7 @@ const Home = () => {
     <div className="flex flex-col w-full min-h-screen bg-app-gradient justify center">
       <div id='about' />
       <section className="z-0 flex flex-col items-center justify-center w-full px-10 md:h-screen sm:px-0">
-        <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row ">
+        <div className="flex flex-col-reverse items-center justify-center w-full h-[500px] 2xl:h-[700px] pb-12 lg:flex-row ">
           <Card />
           <div className="flex items-center justify-center w-full h-full md:w-1/2">
             {/* <Canvas3D className="2xl:w-[550px] md:w-[450px] w-full" /> */}
@@ -19,12 +19,12 @@ const Home = () => {
         </div>
       </section>
 
-      <div id='products'  className="w-full h-[140px] md:h-5"/>
-      <section className="flex flex-col items-center justify-center w-full h-full px-10 pb-12 sm:px-0 z-0">
+      <div id='products'  className="w-full h-[150px] md:h-[50px] 2xl:h-[200px]"/>
+      <section className="z-0 flex flex-col gap-[200px] md:gap-0 items-center justify-center w-full h-full px-10 pb-12 sm:px-0">
         <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row ">
           <Card />
-          <div className="flex items-center justify-center w-full h-full md:w-1/2">
-            <Canvas3D className="2xl:w-[550px] md:w-[450px] w-full" />
+          <div className="flex items-center justify-center w-full h-full 2xl:h-[500px] md:w-1/2">
+            <Canvas3D className="2xl:w-[550px] 2xl:h-full md:w-[450px] w-full " />
           </div>
         </div>
         <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row">

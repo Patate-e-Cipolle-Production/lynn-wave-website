@@ -36,13 +36,13 @@ const Navbar = () => {
                     Logo
                 </div>
 
-                <div className='flex flex-row justify-center items-center'>
+                <div className='flex flex-row items-center justify-center'>
                     {navlinks.map((navlink, index) => (
                         <div 
                             className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
                             key={index}
                         >
-                            <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
+                            <Link href={navlink.link} className='flex items-center justify-center w-full h-full unselectable' draggable={false}>
                                 {navlink.text}
                             </Link>
                         </div>
@@ -50,13 +50,13 @@ const Navbar = () => {
                 </div>
             </div>
         
-            <div className='w-full h-[80px] shadow-object-card rounded-t-xl flex flex-row items-center px-14 md:hidden fixed bottom-0 bg-secondary text-tertiary justify-between ibm-plex-mono-medium z-50 '>
+            <div className='w-full h-[55px] shadow-object-card flex flex-row items-center px-14 md:hidden fixed bottom-0 bg-secondary text-tertiary justify-between ibm-plex-mono-medium z-50 '>
             {navlinks.map((navlink, index) => (
                         <div 
-                            className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
+                            className={`h-full w-[150px] text-tertiary flex items-center justify-center cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
                             key={index}
                         >
-                            <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
+                            <Link href={navlink.link} className='flex items-center justify-center w-full h-full unselectable' draggable={false}>
                                 +
                             </Link>
                         </div>
