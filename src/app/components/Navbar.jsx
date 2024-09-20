@@ -30,24 +30,39 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className='fixed w-full bg-secondary h-[60px] flex flex-row justify-between px-10 ibm-plex-mono-medium z-50'>
-            <div>
-                Logo
-            </div>
+        <>
+            <div className='fixed hidden w-full bg-secondary h-[60px] md:flex flex-row justify-between px-10 ibm-plex-mono-medium z-50'>
+                <div>
+                    Logo
+                </div>
 
-            <div className='flex flex-row justify-center items-center'>
-                {navlinks.map((navlink, index) => (
-                    <div 
-                        className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
-                        key={index}
-                    >
-                        <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
-                            {navlink.text}
-                        </Link>
-                    </div>
-                ))}
+                <div className='flex flex-row justify-center items-center'>
+                    {navlinks.map((navlink, index) => (
+                        <div 
+                            className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
+                            key={index}
+                        >
+                            <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
+                                {navlink.text}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        
+            <div className='w-full h-[80px] shadow-object-card rounded-t-xl flex flex-row items-center px-14 md:hidden fixed bottom-0 bg-secondary text-tertiary justify-between ibm-plex-mono-medium z-50 '>
+            {navlinks.map((navlink, index) => (
+                        <div 
+                            className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
+                            key={index}
+                        >
+                            <Link href={navlink.link} className='unselectable w-full h-full flex justify-center items-center' draggable={false}>
+                                +
+                            </Link>
+                        </div>
+                    ))}
+            </div>
+        </>
     );
 };
 

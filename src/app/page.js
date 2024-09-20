@@ -18,23 +18,25 @@ const Home = () => {
           Iscriviti alla newsletter
         </div>
       </section>
-      <div id='products' />
-      <section className="flex flex-col items-center justify-center w-full h-screen px-10 pb-12 lg:flex-row sm:px-0">
-      <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row ">
+
+      <div id='products'  className="w-full h-[140px] md:h-5"/>
+      <section className="flex flex-col items-center justify-center w-full h-full px-10 pb-12 sm:px-0 z-0">
+        <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row ">
           <Card />
           <div className="flex items-center justify-center w-full h-full md:w-1/2">
             <Canvas3D className="2xl:w-[550px] md:w-[450px] w-full" />
           </div>
         </div>
-      </section>
-      <section className="flex flex-col items-center justify-center w-full h-screen px-10 pb-12 lg:flex-row sm:px-0">
-        <div className="flex items-center justify-center w-1/2 h-full">
-          Mettere immagine qua
+        <div className="flex flex-col-reverse items-center justify-center w-full 2xl:h-full h-[500px] pb-12 lg:flex-row">
+          <div className="flex items-center justify-center w-1/2 h-full">
+            Mettere immagine qua
+          </div>
+          <Card />
         </div>
-        <Card />
       </section>
+
+      <div id='contacts' />
       <section className="flex flex-row items-center justify-center w-full h-screen">
-        <div id='contacts' />
         Caio
       </section>
     </div>
