@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
-import { Card, Navbar, Canvas3D } from "./components";
+import { Card, Navbar, Canvas3D, NewsletterButton } from "./components";
 import { esp32 } from "./assets";
+import { motion } from "framer-motion";
 
 
 const Home = () => {
@@ -14,9 +16,7 @@ const Home = () => {
             {/* <Canvas3D className="2xl:w-[550px] md:w-[450px] w-full" /> */}
           </div>
         </div>
-        <div className="2xl:text-3xl text-2xl flex items-center justify-center bg-white text-tertiary md:rounded-2xl rounded-xl 2xl:w-[520px] 2xl:h-[100px] md:w-[380px] md:h-[70px] w-full h-[100px] hover:bg-secondary shadow-default-card">
-          Iscriviti alla newsletter
-        </div>
+        <NewsletterButton/>
       </section>
 
       <div id='products'  className="w-full h-[150px] md:h-[50px] 2xl:h-[200px]"/>

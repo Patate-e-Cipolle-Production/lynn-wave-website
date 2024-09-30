@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='fixed hidden w-full bg-secondary h-[60px] md:flex flex-row justify-between px-10 ibm-plex-mono-medium z-50'>
+            <div className='fixed hidden w-full bg-secondary h-[60px] md:flex flex-row justify-between px-10 z-50'>
                 <div>
                     Logo
                 </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 <div className='flex flex-row items-center justify-center'>
                     {navlinks.map((navlink, index) => (
                         <div 
-                            className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
+                            className={`h-full w-[150px] text-tertiary flex items-center justify-center hover:bg-white cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink font-semibold z-20' : 'z-10'}`} 
                             key={index}
                         >
                             <Link href={navlink.link} className='flex items-center justify-center w-full h-full unselectable' draggable={false}>
@@ -50,10 +50,10 @@ const Navbar = () => {
                 </div>
             </div>
         
-            <div className='w-full h-[55px] shadow-object-card flex flex-row items-center px-14 md:hidden fixed bottom-0 bg-secondary text-tertiary justify-between ibm-plex-mono-medium z-50 '>
+            <div className='w-full h-[55px] shadow-object-card flex flex-row items-center px-14 md:hidden fixed bottom-0 bg-secondary text-tertiary justify-between z-50 '>
             {navlinks.map((navlink, index) => (
                         <div 
-                            className={`h-full w-[150px] text-tertiary flex items-center justify-center cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink z-20' : 'z-10'}`} 
+                            className={`h-full w-[150px] text-tertiary flex items-center justify-center cursor-pointer ${activeLink === index ? 'bg-white shadow-navlink font-semibold z-20' : 'z-10'}`} 
                             key={index}
                         >
                             <Link href={navlink.link} className='flex items-center justify-center w-full h-full unselectable' draggable={false}>
