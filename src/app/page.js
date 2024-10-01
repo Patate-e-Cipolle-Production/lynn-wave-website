@@ -1,9 +1,5 @@
 "use client"
-import Image from "next/image";
 import { Card, Navbar, Canvas3D, NewsletterButton } from "./components";
-import { esp32 } from "./assets";
-import { motion } from "framer-motion";
-
 
 const Home = () => {
   return (
@@ -35,9 +31,16 @@ const Home = () => {
         </div>
       </section>
 
-      <div id='contacts' />
-      <section className="flex flex-row items-center justify-center w-full h-screen">
-        Caio
+      <section div id='contacts' className="flex flex-col md:flex-row items-center justify-center w-full pt-[80px] h-[780px] px-[80px]">
+        <div className="md:w-1/2 w-full h-full flex flex-col justify-start">
+          <h1 className="font-bold text-4xl text-tertiary">Contatti</h1>
+          <div>
+            {/* //TODO Map contatti */}
+          </div>
+        </div>
+        <div className="w-1/2 h-full flex flex-col justify-center">
+          {/* //TODO form */}
+        </div>
       </section>
     </div>
   );
