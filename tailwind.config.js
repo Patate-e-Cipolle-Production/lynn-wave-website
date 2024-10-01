@@ -22,6 +22,7 @@ module.exports = {
         secondary: "#F0F0F0",
         tertiary: "#595959",
         white: "#fafafa",
+        glass: "#0a0a0a",
         "default": "#D9D9D9",
         "default-inner": "#A3A3A3",
 
